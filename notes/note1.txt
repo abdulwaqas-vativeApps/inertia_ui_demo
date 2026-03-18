@@ -1,0 +1,114 @@
+web.php
+use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
+use App\Http\Controllers\Auth\LoginController;
+
+Route::get('/', function () {
+    return Inertia::render('Home');
+});
+
+// Login Routes
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [LoginController::class, 'login']);
+
+LoginController.php
+namespace App\Http\Controllers\Auth;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Inertia\Inertia;
+
+class LoginController extends Controller
+{
+    public function showLoginForm()
+    {
+        return Inertia::render('Auth/Login');
+    }
+
+    public function login(Request $request)
+    {
+        $credentials = $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
+
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+            return redirect()->intended('/dashboard');
+        }
+
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
+        ]);
+    }
+}
+
+
+
+view/blade.welcome.php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Synergy Dashboard</title>
+    @viteReactRefresh
+    @vite('resources/js/app.jsx')
+    @inertiaHead
+</head>
+<body>
+    @inertia
+</body>
+</html>
+
+
+app.jsx
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { App } from '@inertiajs/inertia-react';
+
+const el = document.getElementById('app');
+
+createRoot(el).render(
+  <App 
+    initialPage={JSON.parse(el.dataset.page)} 
+    resolveComponent={name => import(`./Pages/${name}`).then(module => module.default)}
+  />
+);
+
+
+terminal response 
+C:\Users\vativeApps-Dev\Desktop\abdul-waqas\backend_intern\Learning\inertia_ui_demo>php artisan serve        
+use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
+use App\Http\Controllers\Auth\LoginController;
+
+Route::get('/', function () {
+    return Inertia::render('Home');
+});
+
+// Login Routes
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [LoginController::class, 'login']);
+
+
+<!-- use Illuminate\Support\Facades\Route;
+
+Route::get('/', function () {
+    return view('welcome');
+}); -->
+
+   INFO  Server running on [http://127.0.0.1:8000].
+
+  Press Ctrl+C to stop the server
+
+  2026-03-18 14:40:16 /favicon.ico .................................................................. ~ 1s
+  2026-03-18 14:40:16 / ............................................................................ ~ 12s
+  2026-03-18 14:40:18 /favicon.ico ................................................................. ~ 10s
+
+
+
+abhi bhi yehi error a rha h
+use Illuminate\Support\Facades\Route; use Inertia\Inertia; use App\Http\Controllers\Auth\LoginController; Route::get('/', function () { return Inertia::render('Home'); }); // Login Routes Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login'); Route::post('/login', [LoginController::class, 'login']);
+404
+Not Found
