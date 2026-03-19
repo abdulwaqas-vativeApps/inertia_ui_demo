@@ -1,0 +1,78 @@
+====================================================
+prompt 1 
+===================================================
+https://inertiajs.com/
+inertiajs.comInertia.js - The Modern MonolithInertia.js lets you quickly build modern single-page React, Vue and Svelte apps using classic server-side routing and controllers.https://inertiajs.com/[2:57 PM]https://dev.to/aleson-franca/laravel-inertia-build-modern-apps-without-leaving-laravel-37nnDEV CommunityLaravel + Inertia: Build modern apps without leaving laravelHave you ever wanted to build dynamic, modern apps with Vue, React, or Svelte but still keep the...
+
+sir ne mujhe ye chezen parhney k lien di thi aur m ne parhlin hn
+ab mujeh is ka use kr k aik project bnana h inertia,laravel,react,shadcn,sql ka use kr k
+aur project aik cummuntiy ka dashborad h (synergy dashboard)
+aur mere is m 
+1 home page of webste, 3 authentication pages, onboarding flow with subpages (stepper) , dashboard with its multples tabs and their right pages
+
+aur is k lien m ne b ye 
+C:\Users\vativeApps-Dev\Desktop\abdul-waqas\backend_intern\Learning>composer create-project laravel/laravel inertia_ui_demo
+commad chla kr laravel setup ko kr lia h
+
+ab agay kia krna chaie mujhe step step guide kro aur ye project banwao
+
+aur is k lien folder structure bhi bun wana industry best practices ko follow krty hway
+
+
+
+
+
+
+
+
+
+
+
+inertia_ui_demo/
+├─ app/
+│  ├─ Http/
+│  │  ├─ Controllers/
+│  │  │  ├─ Auth/          # Authentication controllers (Login, Register, etc)
+│  │  │  ├─ Dashboard/     # Dashboard controllers
+│  │  │  └─ HomeController.php
+├─ database/
+│  ├─ migrations/
+│  └─ seeders/
+├─ resources/
+│  ├─ js/
+│  │  ├─ Pages/
+│  │  │  ├─ Auth/
+│  │  │  │  ├─ Login.jsx
+│  │  │  │  ├─ Register.jsx
+│  │  │  │  ├─ ForgotPassword.jsx
+│  │  │  │  └─ Onboarding/
+│  │  │  │     ├─ Step1.jsx
+│  │  │  │     ├─ Step2.jsx
+│  │  │  │     └─ Step3.jsx
+│  │  │  ├─ Dashboard/
+│  │  │  │  ├─ Overview.jsx
+│  │  │  │  ├─ Members.jsx
+│  │  │  │  ├─ Content.jsx
+│  │  │  │  └─ Settings.jsx
+│  │  │  └─ Home.jsx
+│  │  ├─ Components/        # Reusable UI components (Buttons, Cards, Navbar)
+│  │  ├─ Layouts/           # AppLayout, AuthLayout
+│  │  └─ app.jsx
+│  └─ views/
+│     └─ app.blade.php
+├─ routes/
+│  └─ web.php
+└─ vite.config.js
+
+
+
+
+
+
+
+
+
+
+
+chat link 
+https://chatgpt.com/share/69bb8c83-d2ac-800b-82cc-c3232c41edf4
