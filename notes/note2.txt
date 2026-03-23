@@ -74,5 +74,7 @@ inertia_ui_demo/
 
 
 
+
+
 chat link 
 https://chatgpt.com/share/69bb8c83-d2ac-800b-82cc-c3232c41edf4

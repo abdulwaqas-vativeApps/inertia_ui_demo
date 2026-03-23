@@ -1,12 +1,11 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { App } from '@inertiajs/inertia-react';
+import { createInertiaApp } from '@inertiajs/react';
+import '../css/app.css';
 
-const el = document.getElementById('app');
-
-createRoot(el).render(
-  <App 
-    initialPage={JSON.parse(el.dataset.page)} 
-    resolveComponent={name => import(`./Pages/${name}`).then(module => module.default)}
-  />
-);
+createInertiaApp({
+  resolve: name => import(`./pages/${name}.jsx`),
+  setup({ el, App, props }) {
+    createRoot(el).render(<App {...props} />);
+  },
+});

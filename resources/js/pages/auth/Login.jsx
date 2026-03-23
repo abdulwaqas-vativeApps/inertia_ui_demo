@@ -2,19 +2,18 @@ import React, { useState } from "react";
 import AuthLayout from "../../layouts/AuthLayout";
 import Input from "../../components/ui/Input";
 import Button from "../../components/ui/Button";
-import { Inertia } from "@inertiajs/inertia";
-
+import { router } from "@inertiajs/react";
 export default function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        Inertia.post("/login", { email, password });
+        router.post("/login", { email, password });
     };
 
     return (
-        <AuthLayout>
+        <>
             <h2 className="text-xl font-bold mb-4 text-center">Login</h2>
             <form onSubmit={handleSubmit}>
                 <Input
@@ -35,6 +34,6 @@ export default function Login() {
                     Login
                 </Button>
             </form>
-        </AuthLayout>
+        </>
     );
 }
