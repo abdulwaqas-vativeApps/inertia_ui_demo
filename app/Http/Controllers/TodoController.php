@@ -28,19 +28,24 @@ class TodoController extends Controller
         return redirect()->back();
     }
 
-    public function update(Request $request, Todo $todo)
-    {
-        $todo->update([
-            'completed' => !$todo->completed
-        ]);
+public function update(Request $request, Todo $todo)
+{
+    $data = $request->validate([
+        'title' => 'nullable|string',
+        'completed' => 'nullable|boolean',
+    ]);
 
-        return back();
-    }
+    $todo->update([
+        'title' => $data['title'] ?? $todo->title,
+        'completed' => $data['completed'] ?? $todo->completed,
+    ]);
 
+    return redirect('/todos', 303);
+}
     public function destroy(Todo $todo)
     {
         $todo->delete();
 
-        return back();
-    }
+      return redirect('/todos', 303);   
+ }
 }
