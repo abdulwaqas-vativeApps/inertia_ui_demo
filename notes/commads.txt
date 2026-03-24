@@ -1,0 +1,354 @@
+# Laravel + Inertia + React + MySQL + Tailwind/ShadCN — Important Commands Cheat Sheet
+
+---
+
+## 1. Project Creation & Setup
+
+### Create Laravel project
+
+```bash
+composer create-project laravel/laravel project-name
+```
+
+**Use case:** New Laravel application start karna.
+
+---
+
+### Install dependencies
+
+```bash
+composer install
+npm install
+```
+
+**Use case:** Backend (Composer) aur frontend (Node) dependencies install karna.
+
+---
+
+### Environment setup
+
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+**Use case:** Environment config file create karna aur app key generate karna.
+
+---
+
+## 2. Database (MySQL)
+
+### Configure database
+
+`.env` me:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_db
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+**Use case:** MySQL database connection setup.
+
+---
+
+### Run migrations
+
+```bash
+php artisan migrate
+```
+
+**Use case:** Database tables create karna.
+
+---
+
+### Reset database
+
+```bash
+php artisan migrate:fresh
+```
+
+**Use case:** Sab tables drop karke dubara create karna.
+
+---
+
+### Migrate + seed
+
+```bash
+php artisan migrate:fresh --seed
+```
+
+**Use case:** Database reset + sample data insert karna.
+
+---
+
+## 3. Model / Controller / Migration
+
+### Create Model + Migration + Controller
+
+```bash
+php artisan make:model Todo -mcr
+```
+
+**Use case:** Model, migration aur resource controller ek saath create karna.
+
+---
+
+### Create Controller
+
+```bash
+php artisan make:controller TodoController
+```
+
+**Use case:** Business logic handle karne ke liye controller banana.
+
+---
+
+### Create Migration
+
+```bash
+php artisan make:migration create_todos_table
+```
+
+**Use case:** Database table structure define karna.
+
+---
+
+## 4. Routes
+
+### View all routes
+
+```bash
+php artisan route:list
+```
+
+**Use case:** Project ke saare routes check karna.
+
+---
+
+### Clear routes cache
+
+```bash
+php artisan route:clear
+```
+
+**Use case:** Route caching issues fix karna.
+
+---
+
+## 5. Cache / Config
+
+### Clear all caches
+
+```bash
+php artisan optimize:clear
+```
+
+**Use case:** Config, route, view, cache sab clear karna.
+
+---
+
+### Clear config cache
+
+```bash
+php artisan config:clear
+```
+
+**Use case:** Config changes apply karna.
+
+---
+
+### Cache config (production)
+
+```bash
+php artisan config:cache
+```
+
+**Use case:** Config performance optimize karna.
+
+---
+
+## 6. Server Run
+
+### Start Laravel server
+
+```bash
+php artisan serve
+```
+
+**Use case:** Backend development server run karna.
+
+---
+
+### Start frontend dev server
+
+```bash
+npm run dev
+```
+
+**Use case:** React + Vite development server run karna.
+
+---
+
+### Build frontend for production
+
+```bash
+npm run build
+```
+
+**Use case:** Optimized frontend assets generate karna.
+
+---
+
+## 7. Inertia Setup
+
+### Install Inertia Laravel adapter
+
+```bash
+composer require inertiajs/inertia-laravel
+```
+
+**Use case:** Laravel backend me Inertia integration add karna.
+
+---
+
+### Install React adapter
+
+```bash
+npm install @inertiajs/react
+```
+
+**Use case:** React frontend me Inertia integration.
+
+---
+
+### Install Vite React plugin
+
+```bash
+npm install @vitejs/plugin-react
+```
+
+**Use case:** Vite me React support enable karna.
+
+---
+
+## 8. Tailwind CSS
+
+### Install Tailwind
+
+```bash
+npm install -D tailwindcss postcss autoprefixer
+```
+
+**Use case:** Tailwind CSS install karna.
+
+---
+
+### Initialize Tailwind config
+
+```bash
+npx tailwindcss init -p
+```
+
+**Use case:** Tailwind configuration files generate karna.
+
+---
+
+## 9. ShadCN UI
+
+### Initialize ShadCN
+
+```bash
+npx shadcn-ui@latest init
+```
+
+**Use case:** ShadCN UI setup initialize karna.
+
+---
+
+### Add component
+
+```bash
+npx shadcn-ui@latest add button
+```
+
+**Use case:** Prebuilt UI component add karna.
+
+---
+
+## 10. Composer Utilities
+
+### Autoload refresh
+
+```bash
+composer dump-autoload
+```
+
+**Use case:** New classes detect karne ke liye autoload regenerate karna.
+
+---
+
+## 11. Storage
+
+### Link storage
+
+```bash
+php artisan storage:link
+```
+
+**Use case:** Public storage files access enable karna.
+
+---
+
+## 12. Debugging
+
+### Tinker (Laravel REPL)
+
+```bash
+php artisan tinker
+```
+
+**Use case:** Database/models interactively test karna.
+
+---
+
+## 13. Seeder
+
+### Run seeders
+
+```bash
+php artisan db:seed
+```
+
+**Use case:** Database me sample/initial data insert karna.
+
+---
+
+## 14. Authentication (Inertia React Starter)
+
+### Install Breeze (React + Inertia auth)
+
+```bash
+composer require laravel/breeze --dev
+php artisan breeze:install react
+npm install
+php artisan migrate
+npm run dev
+```
+
+**Use case:** Login/register system setup karna with React + Inertia.
+
+---
+
+## 15. Queue (Optional but important)
+
+### Run queue worker
+
+```bash
+php artisan queue:work
+```
+
+**Use case:** Background jobs process karna.

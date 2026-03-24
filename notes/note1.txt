@@ -1,45 +1,1362 @@
-abhi mere Todo.php ki file asi h
-<?php
+=============================================================================
+Prompt : 1
+=============================================================================
 
-namespace App\Models;
+I am creating a community dashboard project called as "synergy" using laravel,prisma,mysql,react,shadcn.
+and i am folloing this folder structure
 
-use Illuminate\Database\Eloquent\Model;
+i have setup and intial laravel/interia project
+also setup a mysql with migration and run seeder 
+my 60% work of frontend and backend is complete, remaining work we will complete togther
 
-class Todo extends Model
-{
-    //
-}
+inertia_ui_demo/
+├─ app/
+│  ├─ Http/
+│  │  ├─ Controllers/
+│  │  │  ├─ Auth/          # Authentication controllers (Login, Register, etc)
+│  │  │  ├─ Dashboard/     # Dashboard controllers
+│  │  │  └─ HomeController.php
+├─ database/
+│  ├─ migrations/
+│  └─ seeders/
+├─ resources/
+│  ├─ js/
+│  │  ├─ pages/
+│  │  │  ├─ auth/
+│  │  │  │  ├─ Login.jsx
 
-
-aur 2026_03_24_050545_create_todos_table.php ki file asi h 
-<?php
-
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
-
-return new class extends Migration
-{
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
-    {
-        Schema::create('todos', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
-    }
-
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
-    {
-        Schema::dropIfExists('todos');
-    }
-};
-
+│  │  │  ├─ Dashboard/
+│  │  │  │  ├─ Overview.jsx
+│  │  │  │  ├─ Members.jsx
+│  │  │  │  ├─ Content.jsx
+│  │  │  │  └─ Settings.jsx
+│  │  │  └─ Home.jsx
+│  │  ├─ Components/        # Reusable UI components (Buttons, Cards, Navbar)
+│  │  ├─ Layouts/           # AppLayout, AuthLayout
+│  │  └─ app.jsx
+│  └─ views/
+│     └─ app.blade.php
+├─ routes/
+│  └─ web.php
+└─ vite.config.js
 
 
-in m kia krna h ab in file ka complete code do 
+
+
+
+
+
+
+
+
+
+=============================================================================
+Prompt : 2
+=============================================================================
+now create a landing page of our synergy in pages/Home.jsx 
+
+I am sharing figma css and image of the landing page, so you can easily make deto copy so that page
+
+this is all css layers of landing page design
+
+
+
+
+I am also sharing a image of landing by
+ follow this thing and make deto copy of that page
+ wirte well commeted code
+ donot use emojis
+ also responsive on all devices
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Create a Profie complete page for the Synergy project in the file:
+
+resources/js/pages/Home.jsx
+
+I am sharing Figma CSS and a reference image of the profile complete page design so you can accurately replicate it as a pixel-perfect copy.
+
+These include all the CSS layers and styling details of the landing page design.
+
+/* Profile Completion */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+position: relative;
+width: 1280px;
+height: 1220px;
+left: 1738px;
+top: 358px;
+
+background: #F8F6F6;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+
+width: 1280px;
+height: 1220px;
+min-height: 1212px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 1280px;
+height: 1220px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Header - Navigation */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 16px 40px;
+gap: 891.73px;
+
+width: 1280px;
+height: 81px;
+
+background: #FFFFFF;
+border-bottom: 1px solid #E2E8F0;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 12px;
+
+width: 36px;
+height: 48px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Synergy Logo 1 */
+
+width: 36px;
+height: 48px;
+
+background: url(Synergy Logo.png);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Button */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+
+width: 40px;
+height: 40px;
+
+background: #F1F5F9;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+width: 16px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Icon */
+
+width: 16px;
+height: 20px;
+
+background: #475569;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Main */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 48px 16px;
+
+width: 1280px;
+height: 1055px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Background+Border+Shadow */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+width: 560px;
+max-width: 560px;
+height: 959px;
+
+background: #FFFFFF;
+border: 1px solid #F1F5F9;
+box-shadow: 0px 20px 25px -5px rgba(20, 89, 104, 0.05), 0px 8px 10px -6px rgba(20, 89, 104, 0.05);
+border-radius: 12px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Celebration Header Image */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+isolation: isolate;
+
+width: 558px;
+height: 256px;
+
+background: rgba(20, 89, 104, 0.1);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Gradient */
+
+position: absolute;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+
+background: linear-gradient(135deg, rgba(20, 89, 104, 0.2) 0%, rgba(20, 89, 104, 0) 100%);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* Icon */
+
+position: absolute;
+width: 33px;
+height: 33px;
+left: 14.85px;
+top: 16.43px;
+
+background: #145968;
+opacity: 0.2;
+transform: rotate(12deg);
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 2.40079px 0px 0px;
+
+position: absolute;
+width: 49.26px;
+height: 50.4px;
+right: 52.23px;
+bottom: 34.33px;
+
+opacity: 0.2;
+transform: rotate(-12deg);
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+
+
+/* stars */
+
+width: 49.26px;
+height: 48px;
+
+font-family: 'Material Symbols Outlined';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 48px;
+/* identical to box height, or 100% */
+display: flex;
+align-items: center;
+
+color: #145968;
+
+transform: rotate(-12deg);
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+position: absolute;
+width: 25.06px;
+height: 25.09px;
+right: 24px;
+top: 48px;
+
+opacity: 0.1;
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+flex-grow: 0;
+z-index: 3;
+
+
+/* Icon */
+
+width: 25.06px;
+height: 25.09px;
+
+background: #145968;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+width: 101.88px;
+height: 99.25px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 4;
+flex-grow: 0;
+z-index: 4;
+
+
+/* Background */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 24px;
+isolation: isolate;
+
+width: 101.88px;
+height: 99.25px;
+
+background: #145968;
+border-radius: 9999px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Overlay+Shadow */
+
+position: absolute;
+left: 0px;
+right: -0.12px;
+top: 0px;
+bottom: 0.25px;
+
+background: rgba(255, 255, 255, 0.002);
+box-shadow: 0px 10px 15px -3px rgba(20, 89, 104, 0.3), 0px 4px 6px -4px rgba(20, 89, 104, 0.3);
+border-radius: 9999px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* Icon */
+
+width: 53.88px;
+height: 51.25px;
+
+background: #FFFFFF;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 48px;
+gap: 32px;
+
+width: 558px;
+height: 701px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 12px;
+
+width: 462px;
+height: 113px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Heading 1 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+width: 462px;
+height: 45px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Profile completed */
+
+width: 334px;
+height: 45px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 45px;
+/* identical to box height, or 125% */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.9px;
+
+color: #0F172A;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+width: 462px;
+height: 56px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* You're all set to start networking with top-tier founders! */
+
+width: 444px;
+height: 56px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 28px;
+/* or 156% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #64748B;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Progress Section */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 24px;
+gap: 12px;
+
+width: 462px;
+height: 158px;
+
+background: #F8FAFC;
+border: 1px solid #F1F5F9;
+border-radius: 12px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 0px;
+gap: 119.62px;
+
+width: 412px;
+height: 28px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+width: 246.33px;
+height: 24px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+width: 18.33px;
+height: 17.5px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Icon */
+
+width: 18.33px;
+height: 17.5px;
+
+background: #145968;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Profile Strength: Maximum */
+
+width: 220px;
+height: 24px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #334155;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+width: 58.36px;
+height: 28px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* 100% */
+
+width: 58.36px;
+height: 28px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 900;
+font-size: 20px;
+line-height: 28px;
+/* identical to box height, or 140% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #145968;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Background */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+padding: 0px;
+
+width: 412px;
+height: 12px;
+
+background: #E2E8F0;
+border-radius: 9999px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Background */
+
+width: 412px;
+height: 12px;
+
+background: #145968;
+border-radius: 9999px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 1;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 4px 0px 0px;
+
+width: 412px;
+height: 44px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Excellent work! You have unlocked all platform features including direct DM, meeting requests, and exclusive groups. */
+
+width: 403.5px;
+height: 40px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+/* or 143% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #64748B;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Highlights */
+
+width: 462px;
+height: 110px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Overlay+Border */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 16px;
+gap: 4px;
+
+position: absolute;
+height: 102px;
+left: 0px;
+right: 239px;
+top: 0px;
+
+background: rgba(20, 89, 104, 0.05);
+border: 1px solid rgba(20, 89, 104, 0.1);
+border-radius: 8px;
+
+
+/* Margin */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px 0px 4px;
+
+width: 22px;
+height: 20px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+width: 22px;
+height: 16px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Icon */
+
+width: 22px;
+height: 16px;
+
+background: #145968;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* 500+ */
+
+width: 51px;
+height: 24px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #0F172A;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Connections */
+
+width: 96.39px;
+height: 16px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.6px;
+text-transform: uppercase;
+
+color: #64748B;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* Overlay+Border */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 16px;
+gap: 4px;
+
+position: absolute;
+height: 107px;
+left: 239px;
+right: 0px;
+top: 0px;
+
+background: rgba(20, 89, 104, 0.05);
+border: 1px solid rgba(20, 89, 104, 0.1);
+border-radius: 8px;
+
+
+/* Margin */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px 0px 4px;
+
+width: 16px;
+height: 25px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+width: 16px;
+height: 21px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Icon */
+
+width: 16px;
+height: 21px;
+
+background: #145968;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Verified */
+
+width: 73px;
+height: 24px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #0F172A;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* Founder Status */
+
+width: 116.23px;
+height: 16px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.6px;
+text-transform: uppercase;
+
+color: #64748B;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+
+
+/* CTA */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 8px 0px 0px;
+gap: 16px;
+
+width: 462px;
+height: 128px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 3;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Button */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px 0px;
+gap: 8px;
+isolation: isolate;
+
+width: 462px;
+height: 60px;
+
+background: #145968;
+border-radius: 12px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Button:shadow */
+
+position: absolute;
+left: 0px;
+right: 0px;
+top: 0px;
+bottom: 0px;
+
+background: rgba(255, 255, 255, 0.002);
+box-shadow: 0px 10px 15px -3px rgba(20, 89, 104, 0.2), 0px 4px 6px -4px rgba(20, 89, 104, 0.2);
+border-radius: 12px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+z-index: 0;
+
+
+/* Go to Dashboard */
+
+width: 155px;
+height: 28px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 28px;
+/* identical to box height, or 156% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+z-index: 1;
+
+
+/* Container */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+
+width: 16px;
+height: 16px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+flex-grow: 0;
+z-index: 2;
+
+
+/* Icon */
+
+width: 16px;
+height: 16px;
+
+background: #FFFFFF;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Button */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 12px 0px;
+
+width: 462px;
+height: 44px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* Review Profile Details */
+
+width: 184px;
+height: 20px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #475569;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Footer */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 32px 24px;
+
+width: 1280px;
+height: 84px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+/* © 2024 Synergy Founder Network. Building the future together. */
+
+width: 421.39px;
+height: 20px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #94A3B8;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+You must follow the provided reference image and CSS closely to recreate the layout, styling, spacing, typography, and overall structure exactly as shown.
+
+Requirements:
+
+Write clean, well-commented code, especially explaining complex parts of the implementation.
+Do not use emojis in the code.
+Follow the existing project structure and coding conventions already in place.
+Ensure the page is fully responsive across all devices (mobile, tablet, and desktop).
+Build the page using React with Inertia.js, consistent with the current project setup.
