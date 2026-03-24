@@ -32,7 +32,7 @@ cp .env.example .env
 php artisan key:generate
 ```
 
-**Use case:** Environment config file create karna aur app key generate karna.
+**Use case:** Environment config file create karna aur app key generate karna for sessions, password hashing.
 
 ---
 

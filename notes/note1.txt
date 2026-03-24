@@ -27,9 +27,6 @@ inertia_ui_demo/
 
 │  │  │  ├─ Dashboard/
 │  │  │  │  ├─ Overview.jsx
-│  │  │  │  ├─ Members.jsx
-│  │  │  │  ├─ Content.jsx
-│  │  │  │  └─ Settings.jsx
 │  │  │  └─ Home.jsx
 │  │  ├─ Components/        # Reusable UI components (Buttons, Cards, Navbar)
 │  │  ├─ Layouts/           # AppLayout, AuthLayout
