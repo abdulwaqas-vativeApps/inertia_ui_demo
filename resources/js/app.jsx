@@ -4,8 +4,24 @@ import { createInertiaApp } from '@inertiajs/react';
 import '../css/app.css';
 
 createInertiaApp({
-  resolve: name => import(`./pages/${name}.jsx`),
+  resolve: name => {
+    const pages = import.meta.glob('./pages/**/*.jsx', { eager: true });
+    return pages[`./pages/${name}.jsx`];
+  },
   setup({ el, App, props }) {
     createRoot(el).render(<App {...props} />);
   },
 });
+
+
+// import React from 'react';
+// import { createRoot } from 'react-dom/client';
+// import { createInertiaApp } from '@inertiajs/react';
+// import '../css/app.css';
+
+// createInertiaApp({
+//   resolve: name => import(`./pages/${name}.jsx`),
+//   setup({ el, App, props }) {
+//     createRoot(el).render(<App {...props} />);
+//   },
+// });

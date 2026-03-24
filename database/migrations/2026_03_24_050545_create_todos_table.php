@@ -1,17 +1,3 @@
-abhi mere Todo.php ki file asi h
-<?php
-
-namespace App\Models;
-
-use Illuminate\Database\Eloquent\Model;
-
-class Todo extends Model
-{
-    //
-}
-
-
-aur 2026_03_24_050545_create_todos_table.php ki file asi h 
 <?php
 
 use Illuminate\Database\Migrations\Migration;
@@ -27,7 +13,11 @@ return new class extends Migration
     {
         Schema::create('todos', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+
+            $table->string('title');              // todo text
+            $table->boolean('completed')->default(false); // status
+
+            $table->timestamps();               // created_at, updated_at
         });
     }
 
@@ -39,7 +29,3 @@ return new class extends Migration
         Schema::dropIfExists('todos');
     }
 };
-
-
-
-in m kia krna h ab in file ka complete code do 
