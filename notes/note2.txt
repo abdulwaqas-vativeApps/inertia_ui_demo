@@ -1,6 +1,7 @@
-====================================================
+===================================================
 prompt 1 
 ===================================================
+
 https://inertiajs.com/
 inertiajs.comInertia.js - The Modern MonolithInertia.js lets you quickly build modern single-page React, Vue and Svelte apps using classic server-side routing and controllers.https://inertiajs.com/[2:57 PM]https://dev.to/aleson-franca/laravel-inertia-build-modern-apps-without-leaving-laravel-37nnDEV CommunityLaravel + Inertia: Build modern apps without leaving laravelHave you ever wanted to build dynamic, modern apps with Vue, React, or Svelte but still keep the...
 
@@ -17,16 +18,6 @@ commad chla kr laravel setup ko kr lia h
 ab agay kia krna chaie mujhe step step guide kro aur ye project banwao
 
 aur is k lien folder structure bhi bun wana industry best practices ko follow krty hway
-
-
-
-
-
-
-
-
-
-
 
 inertia_ui_demo/
 ├─ app/
@@ -63,16 +54,6 @@ inertia_ui_demo/
 ├─ routes/
 │  └─ web.php
 └─ vite.config.js
-
-
-
-
-
-
-
-
-
-
 
 
 
