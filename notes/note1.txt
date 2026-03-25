@@ -48,6 +48,7 @@ inertia_ui_demo/
 =============================================================================
 Prompt : 2
 =============================================================================
+
 mere app/Http/Controllers/Controller.php m ye code h 
 
 <?php
@@ -115,7 +116,9 @@ public function update(Request $request, Todo $todo)
 
 
 kinldy explain this code to me also each word meaning 
-also in file ka kam kia h, aur kis trhn folow chal rha h
+also in file ka kam kia h, aur kis trhn folow chal rha h 
+
+✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅
 
 
 
