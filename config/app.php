@@ -1,3 +1,6 @@
+<!-- config files → define settings → Laravel framework use karta hai → app behave accordingly
+We can also customize this. 
+-->
 <?php
 
 return [

@@ -204,6 +204,7 @@ class User extends Authenticatable
 
 kinldy explain this code to me also each word meaning 
 also in file ka kam kia h, aur kis trhn folow chal rha h
+✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅
 
 
 
@@ -246,6 +247,7 @@ class AppServiceProvider extends ServiceProvider
 
 kinldy explain this code to me also each word meaning 
 also in file ka kam kia h, aur kis trhn folow chal rha h
+✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅
 
 
 
@@ -297,6 +299,7 @@ aur bootstrap/chahe ka folder bhi h us ka kia kam h
 
 kinldy explain this code to me also each word meaning 
 also in file ka kam kia h, aur kis trhn folow chal rha h
+✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅
 
 
 
@@ -320,6 +323,7 @@ ye file m ne create bhi nhe kin aur na in m may ne code likha h, ye khud hi crea
 
 
 in ka kia kam h aur ye kia krti hn aur ye kese craete hoti hn
+✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅
 
 
 
@@ -450,6 +454,7 @@ class DatabaseSeeder extends Seeder
 
 kinldy explain this code to me also each word meaning 
 also in file ka kam kia h, aur kis trhn folow chal rha h
+✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅
 
 
 
@@ -527,6 +532,7 @@ aur resources/views/app.blade.php m ye code h
 
 kinldy explain this code to me also each word meaning 
 also in file ka kam kia h, aur kis trhn folow chal rha h
+✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅
 
 
 
@@ -578,6 +584,7 @@ Artisan::command('inspire', function () {
 
 kinldy explain this code to me also each word meaning 
 also in file ka kam kia h, aur kis trhn folow chal rha h
+✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅✅
 
 
 
@@ -600,4 +607,5 @@ aur is trhn mere storage k folder m bhi app,framework,logs k folders hn aur un m
 
 aur isi trhn tests aur vendor ka folder bhi hn aur un m bhi multiple files/folders hn
 
-in ka kia kam h  
+in ka kia kam h
+✅

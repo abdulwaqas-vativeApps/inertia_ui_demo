@@ -1,5 +1,8 @@
 <?php
 
+// Testing aur seeding ke liye fake data generate karne ke liye
+// Hum User::factory()->create() se ek ya multiple fake users create kar sakte hain
+
 namespace Database\Factories;
 
 use App\Models\User;
@@ -43,3 +46,5 @@ class UserFactory extends Factory
         ]);
     }
 }
+
+

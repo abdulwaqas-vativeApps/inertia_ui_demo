@@ -17,3 +17,5 @@ class AppServiceProvider extends ServiceProvider
         Inertia::setRootView('app');
     }
 }
+
+// inertia render react page in app.blade.php file.
